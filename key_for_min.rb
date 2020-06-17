@@ -9,14 +9,14 @@ def key_for_min_value(name_hash)
     end
 
     minimum = 1000000
-    set_key = ""
+    low_key = ""
     name_hash.each do |key, value|
         if value < minimum
             minimum = value
-            set_key = key
+            low_key = key
         end
     end
-    set_key
+    low_key
 
     # ordered = name_hash.min do |key, value|
     #     key <=> value
