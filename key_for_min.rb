@@ -2,24 +2,26 @@ require 'pry'
 # prereqs: iterators, hashes, conditional logic
 # Given a hash with numeric values, return the key for the smallest value
 
-def key_for_min_value(name_hash)
 
-    if name_hash === {}
-       return nil
-    end
 
-    minimum = 1000000
-    low_key = ""
-    name_hash.each do |key, value|
-        if value < minimum
-            minimum = value
-            low_key = key
+## HANDLE THE NIL by stating if the "holding variable" starts at nil, reassign to the first comparison##
+def key_for_min_value(hash)
+    least_amount = nil
+    least_name = nil
+
+    hash.each do |name, amount|
+        if least_amount == nil || amount < least_amount
+            least_amount = amount
+            least_name = name
         end
+        
     end
-    low_key
 
-    # ordered = name_hash.min do |key, value|
-    #     key <=> value
-    # end
-    # ordered[0]
+    least_name
 end
+
+
+
+
+
+
